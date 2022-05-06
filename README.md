@@ -17,10 +17,10 @@ python /crawler/semantic_scholar_search.py
 * 利用 /data/reference.json 將每個 reference 關係當作是無項圖的一條邊，建立起一個網路
 * 建立網路後，會使用 community detection 演算法將網路切割成一個個 communities
 * 這邊會產生兩個 json 檔
-  * data/communities.json，這是用來紀錄每個 community 以下的資訊
+  * /data/communities.json，這是用來紀錄每個 community 以下的資訊
     * community 內部的邊 (邊兩端的點皆在同個 community 內)
     * community 所含的點
-  * data/nodes2community.json，這是用來紀錄每個點位於哪個 community
+  * /data/nodes2community.json，這是用來紀錄每個點位於哪個 community
 ```
 python build_network.py
 ```
