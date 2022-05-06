@@ -11,6 +11,7 @@ categorie = "cs.cl"
 years = ["17", "18", "19", "20", "21"]
 months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
 url = base_url + "/" + categorie + "/" 
+crawler_limit = 3
 
 for year in years:
     for month in tqdm(months):
@@ -40,4 +41,4 @@ for year in years:
         with open(f'../data/arxiv_id2title_{year}{month}.json', 'w', encoding='utf-8') as f:
             json.dump(papers, f, ensure_ascii=False, indent=4)
 
-        sleep(3)
+        sleep(crawler_limit)
