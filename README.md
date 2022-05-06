@@ -1,5 +1,5 @@
 ## 系統簡介
-* 這是一個基於 community detection 與 link prediction 兩種 network 演算法，所建立的論文推薦系統。
+* 這是一個基於 community detection 與 link prediction 兩種 network 演算法，所建立的簡易論文推薦系統。
 * 給系統一篇你有興趣的論文，系統會給你幾篇推薦論文。
 
 ## 資料爬取
