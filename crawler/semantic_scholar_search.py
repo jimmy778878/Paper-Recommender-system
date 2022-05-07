@@ -3,7 +3,7 @@ import requests
 from time import sleep
 from tqdm import tqdm
 
-years = ["17", "18", "19", "20", "21"]
+years = ["17", "18"]#, "19", "20", "21"]
 months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
 crawler_limit = 3.5
 
@@ -27,7 +27,7 @@ for year in years:
 
             sleep(crawler_limit)
         
-        with open(f"../data/reference/{year}{month}.json", 'w', encoding='utf-8') as f:
+        with open(f"../data/semantic_scholar/{year}{month}.json", 'w', encoding='utf-8') as f:
             json.dump(references, f, ensure_ascii=False, indent=4)
 
         sleep(180)
