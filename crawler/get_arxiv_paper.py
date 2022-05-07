@@ -38,7 +38,7 @@ for year in years:
             papers[id.get_text().replace("arXiv:", "")] = title.get_text().replace("\nTitle: ", "").strip("\n")
 
 
-        with open(f'../data/arxiv_id2title_{year}{month}.json', 'w', encoding='utf-8') as f:
+        with open(f'../data/arxiv_id2title/{year}{month}.json', 'w', encoding='utf-8') as f:
             json.dump(papers, f, ensure_ascii=False, indent=4)
 
         sleep(crawler_limit)

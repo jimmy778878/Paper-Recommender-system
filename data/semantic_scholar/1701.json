@@ -1,0 +1,99 @@
+{
+    "0937f898d07c48e6599f52af35ca3d777a4464f6": {
+        "title": "A POS Tagger for Code Mixed Indian Social Media Text - ICON-2016 NLP  Tools Contest Entry from Surukam",
+        "references": [
+            {
+                "paperId": "004c857f76779260664a9907645938c96cb1896a",
+                "title": "Code Mixing: A Challenge for Language Identification in the Language of Social Media"
+            },
+            {
+                "paperId": "02b3e1a74d6f09a467823ade1460fb950b7f609b",
+                "title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing"
+            },
+            {
+                "paperId": "02e55c6fc9012260881d32910fc33a59ac7559cd",
+                "title": "Experiments with POS Tagging Code-mixed Indian Social Media Text"
+            },
+            {
+                "paperId": "1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+                "title": "Transfer Learning for Low-Resource Neural Machine Translation"
+            },
+            {
+                "paperId": "2abb5d33cea92d04ac7270692f9775a9e7307cd7",
+                "title": "AMRITA_CEN@ ICON-2015: Part-of-Speech Tagging on Indian Language Mixed Scripts in Social Media"
+            },
+            {
+                "paperId": "6cccb25711e8efbdc8df137e8ef21d9f9323c4d7",
+                "title": "POS Tagging of English-Hindi Code-Mixed Social Media Content"
+            },
+            {
+                "paperId": "9d1470698bbf4573974c97b62ad466fe3127f7fd",
+                "title": "Overview for the First Shared Task on Language Identification in Code-Switched Data"
+            },
+            {
+                "paperId": "a10ba8b60785823181577dc91a77b7ce077e5482",
+                "title": "Coupling an Annotated Corpus and a Morphosyntactic Lexicon for State-of-the-Art POS Tagging with Less Human Effort"
+            },
+            {
+                "paperId": "a145854ede2f62098bf4e92de1584ab270b676c9",
+                "title": "Part-of-Speech Tagging Guidelines for the Penn Treebank Project (3rd Revision)"
+            },
+            {
+                "paperId": "b335347036b79868421d5afb6af4de67eaff4147",
+                "title": "Dynamic Feature Induction: The Last Gist to the State-of-the-Art"
+            },
+            {
+                "paperId": "c432268dd885d9ae02190d8662321f3a3e325a4a",
+                "title": "Biomedical Named Entity Recognition using Conditional Random Fields and Rich Feature Sets"
+            },
+            {
+                "paperId": "c82c9ea0073129904738fbc051c06188c02f4f6b",
+                "title": "On Measuring the Complexity of Code-Mixing"
+            },
+            {
+                "paperId": "d294182e2b5b1a91eb2ce9b148d0b15f9becaa47",
+                "title": "Overview of FIRE 2014 Track on Transliterated Search"
+            },
+            {
+                "paperId": "d5e937555f338a14249ebee8b418b96b467fcb96",
+                "title": "Duelling Languages: Grammatical Structure in Codeswitching"
+            },
+            {
+                "paperId": "d9674edc47fd41c27c0c6497c0e7d6bf1910d84e",
+                "title": "A Universal Part-of-Speech Tagset"
+            },
+            {
+                "paperId": "de99a0ac42cba7be57ea7c9fa29a0decbe4847d4",
+                "title": "Part-of-Speech Tagging for Code-Mixed English-Hindi Twitter and Facebook Chat Messages"
+            },
+            {
+                "paperId": "e903c9d05a137ab74cd9768de6b127acb128fcf7",
+                "title": "Automatically Identify and Label Sections in Scientific Journals Using Conditional Random Fields"
+            },
+            {
+                "paperId": "eb42a490cf4f186d3383c92963817d100afd81e2",
+                "title": "Feature-Rich Part-of-Speech Tagging with a Cyclic Dependency Network"
+            },
+            {
+                "paperId": "f4ba954b0412773d047dc41231c733de0c1f4926",
+                "title": "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data"
+            },
+            {
+                "paperId": null,
+                "title": "Tagging For Code-Mixed Indian Social Media Text : Systems from IIIT-H for ICON NLP Tools Contest 12th International Conference on Natural Language Process- ing"
+            },
+            {
+                "paperId": null,
+                "title": "Gumperz Discourse strategies"
+            },
+            {
+                "paperId": null,
+                "title": "Proceedings of ICON 2016"
+            },
+            {
+                "paperId": null,
+                "title": "Building a treebank for French. Treebanks"
+            }
+        ]
+    }
+}
