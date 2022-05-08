@@ -3,8 +3,8 @@ import requests
 from time import sleep
 from tqdm import tqdm
 
-years = ["17", "18"]#, "19", "20", "21"]
-months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+years = ["21"]
+months = ["11", "12"]
 crawler_limit = 3.5
 
 for year in years:
