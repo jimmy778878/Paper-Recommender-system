@@ -19,7 +19,7 @@ python /crawler/get_arxiv_paper.py
 python /crawler/semantic_scholar_search.py
 ```
 ## 建立網路
-* 利用 /data/reference.json 將每個 reference 關係當作是無項圖的一條邊，建立起一個網路。
+* 利用 /data/reference.json 將每個 reference 關係當作是無向圖的一條邊，建立起一個網路。
 * 建立網路後，會使用 community detection 演算法將網路切割成一個個 communities。
 * 這邊會產生兩個 json 檔。
   * /data/communities.json，這是用來紀錄每個 community 以下的資訊。
