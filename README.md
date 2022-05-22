@@ -42,5 +42,6 @@ python build_network.py
 * 給定一篇自己有興趣的 paper 以及希望系統推薦的 paper 數量，讓系統進行推薦預測。
 * 系統首先偵測該 input paper 位於哪個 community ，接著讓該 community 中的所有 paper 皆與 input paper 利用 link prediction 演算法計算分數，將分數排序後再回傳結果。
 ```
+cd [project root path]
 python analysis.py
 ```
