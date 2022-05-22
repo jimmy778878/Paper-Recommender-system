@@ -7,13 +7,14 @@
 * 爬取 arxiv 指定類別的 paper，將 paper 的 arxiv id 與 title 保存下來。<br>
 爬下來的資訊保存在 /data/arxiv_id2title/ 目錄下。
 ```
-python /crawler/get_arxiv_paper.py
+cd crawler
+python get_arxiv_paper.py
 ```
 
 * 根據 paper 的 arxiv id 至 semantic scholar 爬取它所 reference 的 papers。
 爬下來的資訊保存在 /data/semantic_scholar/ 目錄下。
 ```
-python /crawler/semantic_scholar_search.py
+python semantic_scholar_search.py
 ```
 ## 建立網路
 * 準備網路建立所需要的資料
@@ -22,7 +23,8 @@ python /crawler/semantic_scholar_search.py
   * data/network_info/semantic_scholar_id2title.json，這是 paper 的 semantic scholar id 對應到 paper title 的檔案 
   * data/network_info/edges，這是保存網路的 edges 的檔案
 ```
-python /data/prepare.py
+cd data
+python prepare.py
 ```
 
 * 將 papers 之間 reference 的關係當作是無向圖的一條邊，建立起一個網路。
