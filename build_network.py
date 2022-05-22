@@ -2,7 +2,7 @@ import json
 import networkx as nx
 import networkx.algorithms.community as nx_comm
 
-with open("data/reference.json", "r", encoding='utf-8') as f:
+with open("data/network_info/edges.json", "r", encoding='utf-8') as f:
     edges = json.load(f)
 
 graph = nx.Graph()
@@ -37,7 +37,7 @@ for community_id, community in enumerate(communities):
         "member": list(community)
     }
 
-with open("data/communities.json", 'w', encoding='utf-8') as f:
+with open("data/network_info/communities.json", 'w', encoding='utf-8') as f:
     json.dump(communities_info, f, ensure_ascii=False, indent=4)
-with open("data/nodes2community.json", 'w', encoding='utf-8') as f:
+with open("data/network_info/nodes2community.json", 'w', encoding='utf-8') as f:
     json.dump(nodes2community, f, ensure_ascii=False, indent=4)

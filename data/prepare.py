@@ -8,7 +8,7 @@ edges = []
 
 for year in years:
     for month in months:
-        with open(f"../data/semantic_scholar/{year}{month}.json", 'w', encoding='utf-8') as f:
+        with open(f"semantic_scholar/{year}{month}.json", 'r', encoding='utf-8') as f:
             papers = json.load(f)
 
         for paper_id, paper_info in papers.items():
@@ -25,11 +25,11 @@ for year in years:
                 edges.append([paper_id, referenced_paper["paperId"]])
 
 
-with open("../data/for_network_build/title2semantic_scholar_id.json", 'w', encoding='utf-8') as f:
+with open("../data/network_info/title2semantic_scholar_id.json", 'w', encoding='utf-8') as f:
     json.dump(title2semantic_scholar_id, f, ensure_ascii=False, indent=4)
 
-with open("../data/for_network_build/semantic_scholar_id2title.json", 'w', encoding='utf-8') as f:
+with open("../data/network_info/semantic_scholar_id2title.json", 'w', encoding='utf-8') as f:
     json.dump(semantic_scholar_id2title, f, ensure_ascii=False, indent=4)
 
-with open("../data/for_network_build/edges.json", 'w', encoding='utf-8') as f:
+with open("../data/network_info/edges.json", 'w', encoding='utf-8') as f:
     json.dump(edges, f, ensure_ascii=False, indent=4)
