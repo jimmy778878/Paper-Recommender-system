@@ -14,16 +14,19 @@ def predict(title: str, top_n: int = 10):
     with open("data/network_info/communities.json", "r", encoding='utf-8') as f:
         communities = json.load(f)
 
+    # 根據輸入的 paper 找出它對應的 community，將該 community 建成一個小型 network
     graph = nx.Graph()
     for edge in communities[community_id]["edges"]:
         graph.add_edge(edge[0], edge[1])
-    
+
+    # 在這個小型 network 中執行 edge detection 演算法，計算每個 node 和輸入 node 相連的可能性    
     query_edges = [(query_paper_id, other_paper) for other_paper 
         in communities[community_id]["member"]]
 
     jc_preds = nx.jaccard_coefficient(graph, query_edges)
     aa_preds = nx.adamic_adar_index(graph, query_edges)
 
+    # 將不同演算法預測結果整合
     mixed_preds = {}
     for preds in [jc_preds, aa_preds]:
         for _, other_paper_id, score in preds:
@@ -32,6 +35,7 @@ def predict(title: str, top_n: int = 10):
             else:
                 mixed_preds[other_paper_id] += score
 
+    # 將預測結果排序並輸出
     mixed_preds = {k: v for k, v in sorted(mixed_preds.items(), key=lambda item: item[1], reverse=True)}
     mixed_preds_id = list(mixed_preds.keys())[:top_n]
     mixed_preds_score = list(mixed_preds.values())[:top_n]
