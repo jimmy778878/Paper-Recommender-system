@@ -35,6 +35,7 @@ python prepare.py
     * community 所含的點。
   * data/network_info/nodes2community.json，這是用來紀錄網路內的每個點位於哪個 community。
 ```
+cd [project root path]
 python build_network.py
 ```
 
