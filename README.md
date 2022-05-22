@@ -7,26 +7,35 @@
 * 爬取 arxiv 指定類別的 paper，將 paper 的 arxiv id 與 title 保存下來。<br>
 爬下來的資訊保存在 /data/arxiv_id2title/ 目錄下。
 ```
-python /crawler/get_arxiv_paper.py
+cd crawler
+python get_arxiv_paper.py
 ```
 
 * 根據 paper 的 arxiv id 至 semantic scholar 爬取它所 reference 的 papers。
-* 在這裡會產生三個 json 檔。
-  * /data/semantic_scholar_id2title.json，這是用來將 semantic scholar id 對應到 title。
-  * /data/title2semantic_scholar_id.json，這是用來將 title 對應到 semantic scholar id。
-  * /data/reference.json，這是用來建立 network 的 data，裡面每筆資料的格式為 (first paper id, second paper id)，代表 first paper 有 reference second paper。
+爬下來的資訊保存在 /data/semantic_scholar/ 目錄下。
 ```
-python /crawler/semantic_scholar_search.py
+python semantic_scholar_search.py
 ```
 ## 建立網路
-* 利用 /data/reference.json 將每個 reference 關係當作是無向圖的一條邊，建立起一個網路。
+* 準備網路建立所需要的資料
+* 這邊會產生三個 json 檔
+  * data/network_info/title2semantic_scholar_id.json，這是 paper 的 paper title 對應到 semantic scholar id 的檔案  
+  * data/network_info/semantic_scholar_id2title.json，這是 paper 的 semantic scholar id 對應到 paper title 的檔案 
+  * data/network_info/edges，這是保存網路的 edges 的檔案
+```
+cd data
+python prepare.py
+```
+
+* 將 papers 之間 reference 的關係當作是無向圖的一條邊，建立起一個網路。
 * 建立網路後，會使用 community detection 演算法將網路切割成一個個 communities。
 * 這邊會產生兩個 json 檔。
-  * /data/communities.json，這是用來紀錄每個 community 以下的資訊。
+  * /data/network_info/communities.json，這是用來紀錄每個 community 的以下資訊。
     * community 內部的邊 (邊兩端的點皆在同個 community 內)。
     * community 所含的點。
-  * /data/nodes2community.json，這是用來紀錄每個點位於哪個 community。
+  * data/network_info/nodes2community.json，這是用來紀錄網路內的每個點位於哪個 community。
 ```
+cd [project root path]
 python build_network.py
 ```
 
@@ -34,5 +43,6 @@ python build_network.py
 * 給定一篇自己有興趣的 paper 以及希望系統推薦的 paper 數量，讓系統進行推薦預測。
 * 系統首先偵測該 input paper 位於哪個 community ，接著讓該 community 中的所有 paper 皆與 input paper 利用 link prediction 演算法計算分數，將分數排序後再回傳結果。
 ```
+cd [project root path]
 python analysis.py
 ```
