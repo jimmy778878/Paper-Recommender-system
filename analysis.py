@@ -32,7 +32,6 @@ def predict(title: str, top_n: int = 10):
             else:
                 mixed_preds[other_paper_id] += score
 
-    # preds = {other_paper_id: score for _, other_paper_id, score in preds}
     mixed_preds = {k: v for k, v in sorted(mixed_preds.items(), key=lambda item: item[1], reverse=True)}
     mixed_preds_id = list(mixed_preds.keys())[:top_n]
     mixed_preds_score = list(mixed_preds.values())[:top_n]
