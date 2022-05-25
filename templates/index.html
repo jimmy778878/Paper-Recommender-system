@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static',    filename='main.css') }}">
+</head>
+
+<body>
+  <div class="s004">
+    <!--<form> -->
+    <fieldset>
+      <legend>NLP Paper Recommendation System</legend>
+      <!-- <div class="inner-form">
+          <div class="input-field">
+            <input class="form-control" id="choices-text-preset-values" type="text" placeholder="Type to search..." />
+            <button class="btn-search" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div> -->
+      <div class="search">
+        <p>
+          <font color="#FFFFFF" , size="5px">Query</font>
+        </p>
+        <input type="text" name='q' id="q">
+      </div>
+      <form method='post' , action="/show">
+        <p class='w'>
+          <font color="#FFFFFF" , size="5px"> TopN </font>
+        </p>
+        <input name='topn' id='topn' type='text' class='article'>
+      </form>
+      <div class="display-all">
+        <input type="button" value="Search" onclick="search()">
+      </div>
+    </fieldset>
+    <!--</form>-->
+    <script>
+      function display() {
+        window.open("http://127.0.0.1:5000/display_all", "_blank");
+      }
+
+      function search() {
+        var url = "http://127.0.0.1:5000/search/?key=";
+        var query_term = document.getElementById("q").value;
+        var topn = document.getElementById("topn").value;
+        query_url = url.concat(query_term);
+
+        query_url = query_url + '?topn='
+        query_url = query_url.concat(topn)
+        console.log(query_url)
+        window.open(query_url, "_blank");
+      }
+
+    </script>
+  </div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
