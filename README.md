@@ -28,7 +28,7 @@ python prepare.py
 ```
 
 * 將 papers 之間 reference 的關係當作是無向圖的一條邊，建立起一個網路。
-* 建立網路後，會使用 community detection 演算法將網路切割成一個個 communities。
+* 建立網路後，會使用 community detection 演算法將網路切割成一個個 community。
 * 這邊會產生兩個 json 檔。
   * /data/network_info/communities.json，這是用來紀錄每個 community 的以下資訊。
     * community 內部的邊 (邊兩端的點皆在同個 community 內)。
